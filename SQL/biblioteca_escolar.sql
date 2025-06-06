@@ -7,21 +7,21 @@ USE biblioteca;
 
 CREATE TABLE livros 
 				(	    id			    INT AUTO_INCREMENT PRIMARY KEY,
-					    titulo		  VARCHAR(100),
+					    titulo		    VARCHAR(100),
 					    autor		    VARCHAR(100),
 					    disponivel	BOOLEAN);
 
 CREATE TABLE alunos 
-				 (    id			INT AUTO_INCREMENT PRIMARY KEY,
-					    nome		VARCHAR(100),
-					    turma		VARCHAR(20));
+				 (   	    id			    INT AUTO_INCREMENT PRIMARY KEY,
+					    nome		    VARCHAR(100),
+					    turma		    VARCHAR(20));
 
 CREATE TABLE emprestimos 
-			  	(    id					      INT AUTO_INCREMENT PRIMARY KEY,
-					     livro_id			    INT,
-					     aluno_id			    INT,
-					     data_emprestimo	DATE,
-					     data_devolucao		DATE,
+			  	(    	     id		            INT AUTO_INCREMENT PRIMARY KEY,
+					     livro_id		    INT,
+					     aluno_id		    INT,
+					     data_emprestimo	    DATE,
+					     data_devolucao	    DATE,
 					     FOREIGN KEY (livro_id)
 						    REFERENCES livros(id),
 					     FOREIGN KEY (aluno_id) 
